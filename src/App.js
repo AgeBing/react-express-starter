@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { fetchWS } from './util/query.js'
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -9,10 +11,14 @@ class App extends Component {
       name: '',
       greeting: ''
     };
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
+  async componentWillMount(){
+    const res = await fetchWS('/hello' , { age : 18 } )
+    console.log( res )
+  }
   handleChange(event) {
     this.setState({ name: event.target.value });
   }

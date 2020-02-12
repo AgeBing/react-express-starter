@@ -1,39 +1,14 @@
-# React application with Express server
+# React 、Express 脚手架
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). Then an Express server was added in the `server` directory. The server is proxied via the `proxy` key in `package.json`.
+## React
+使用 `create-react-app` 构造
 
-## Using this project
+## Express
+添加 `websocket` 接口
+并在前端封装 query 函数用于获取数据以及参数传递
+使用 `supervisor` 进行热更新
 
-Clone the project, change into the directory and install the dependencies.
 
-```bash
-git clone https://github.com/philnash/react-express-starter.git
-cd react-express-starter
-npm install
-```
-
-Create a `.env` file for environment variables in your server.
-
-You can start the server on its own with the command:
-
-```bash
-npm run server
-```
-
-Run the React application on its own with the command:
-
-```bash
-npm start
-```
-
-Run both applications together with the command:
-
-```bash
-npm run dev
-```
-
-The React application will run on port 3000 and the server port 3001.
-
-## React Twilio starter
-
-The [twilio branch](https://github.com/philnash/react-express-starter/tree/twilio) is a similar setup but also provides endpoints with basic [Access Tokens](https://www.twilio.com/docs/iam/access-tokens) for [Twilio Programmable Chat](https://www.twilio.com/docs/chat) and [Twilio Programmable Video](https://www.twilio.com/docs/video). You can use the project as a base for building React chat or video applications.
+## 开发
+`npm i`
+`npm run start`
